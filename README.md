@@ -45,5 +45,16 @@ docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
 ```
-<b>Контейнер запущен на `http://127.0.0.1/admin/`</b>
+<b>Контейнер запущен на `http://127.0.0.1/`!</b></br>
 Проверьте работу, перейдя по ссылке: [127.0.0.1/admin/](http://127.0.0.1/admin/)
+</br>
+Для остановки контейнера используйте команду:
+```
+docker-compose down -v
+```
+
+## Об авторе
+
+Автор проекта - **Кобзев Вячеслав**, студент когорты 44 факультета Бэкенд разработки Яндекс-практикума.</br>
+Контакты для связи: </br>
+[*telegram*](https://t.me/mrslavencio "MrSlavencio")

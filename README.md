@@ -47,7 +47,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 ```
 <b>Контейнер запущен на `http://127.0.0.1/`!</b></br>
 Проверьте работу, перейдя по ссылке: [127.0.0.1/admin/](http://127.0.0.1/admin/)
-</br>
+</br></br>
 Для остановки контейнера используйте команду:
 ```
 docker-compose down -v

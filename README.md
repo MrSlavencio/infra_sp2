@@ -39,3 +39,11 @@ DB_PORT=5432
 ```
 docker-compose up -d
 ```
+По очереди выполните команды:
+```
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
+docker-compose exec web python manage.py collectstatic --no-input
+```
+<b>Контейнер запущен на `http://127.0.0.1/admin/`</b>
+Проверьте работу, перейдя по ссылке: [127.0.0.1/admin/](http://127.0.0.1/admin/)

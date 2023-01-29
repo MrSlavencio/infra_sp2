@@ -44,6 +44,7 @@ docker-compose up -d
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
+docker-compose exec web python manage.py loaddata fixtures.json
 ```
 <b>Контейнер запущен на `http://127.0.0.1/`!</b></br>
 Проверьте работу, перейдя по ссылке: [127.0.0.1/admin/](http://127.0.0.1/admin/)

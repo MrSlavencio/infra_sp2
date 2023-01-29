@@ -10,6 +10,14 @@
 Пользователи могут смотреть отзывы, комментарии и оценки других пользователей, а авторизованниые пользователи могут их еще и добавлять.</br>
 Более подробная информация о функционале сервиса и примерах запроса - [на странице проекта](https://github.com/MrSlavencio/api_yamdb)
 
+## Стек
+* Requests
+* Django
+* Djangorestframework
+* Pandas
+* Docker
+* NGINX
+
 ## Как развернуть проект
 Клонировать репозиторий и перейти в него в командной строке:
 ```
@@ -53,6 +61,59 @@ docker-compose exec web python manage.py loaddata fixtures.json
 ```
 docker-compose down -v
 ```
+
+## Пример запросов к API
+#### GET-запрос на `/api/v1/titles/{title_id}/reviews/`
+Получение списка всех отзывов
+#### POST-запрос на `/api/v1/titles/{title_id}/reviews/`
+Добавление нового отзыва (доступно авторизированным пользователям)
+```json
+{
+"text": "perfecto!",
+"score": 1
+}
+```
+#### PATCH-запрос на `/api/v1/titles/{title_id}/reviews/{review_id}/comments/{comment_id}/`
+Частичное обновление комментария к отзыву по id (доступно только автору комментария, администратору или модератору)
+```json
+{
+"text": "это просто прекрасно!"
+}
+```
+#### GET-запрос на `/api/v1/titles/`
+Получение списка всех произведений
+```response (json)
+{
+    "count": 32,
+    "next": "http://127.0.0.1:8000/api/v1/titles/?limit=5&offset=5",
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "Побег из Шоушенка",
+            "year": 1994,
+            "rating": 10,
+            "description": null,
+            "genre": [
+                {
+                    "name": "Драма",
+                    "slug": "drama"
+                }
+            ],
+            "category": {
+                "name": "Фильм",
+                "slug": "movie"
+            }
+        },
+        ...
+        ]
+}
+```
+
+
+## Rest-API
+
+Документацию по API Вы можете прочитать, запустив проект по ссылке ```/redoc/```
 
 ## Об авторе
 

@@ -11,12 +11,19 @@
 Более подробная информация о функционале сервиса и примерах запроса - [на странице проекта](https://github.com/MrSlavencio/api_yamdb)
 
 ## Стек
-* Requests
-* Django
-* Djangorestframework
-* Pandas
-* Docker
-* NGINX
+
+* requests==2.26.0
+* django==2.2.16
+* djangorestframework==3.12.4
+* PyJWT==2.1.0
+* pytest==6.2.4
+* pytest-django==4.4.0
+* pytest-pythonpath==0.7.3
+* pandas==1.3.5
+* djangorestframework-simplejwt==4.7.2
+* django-filter==2.4.0
+* gunicorn==20.0.4
+* psycopg2-binary==2.8.6
 
 ## Как развернуть проект
 Клонировать репозиторий и перейти в него в командной строке:

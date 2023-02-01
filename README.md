@@ -24,6 +24,8 @@
 * django-filter==2.4.0
 * gunicorn==20.0.4
 * psycopg2-binary==2.8.6
+* [Docker](https://docs.docker.com/)
+* [NGINX](https://nginx.org/ru/)
 
 ## Как развернуть проект
 Клонировать репозиторий и перейти в него в командной строке:
